@@ -25,7 +25,7 @@ public class Yatzygame {
             return frequencies[1];
         }
         if(category == YatzyCategory.TWOS){
-            return frequencies[2];
+            return frequencies[2] * 2;
         }
         return result;
     }
