@@ -11,14 +11,15 @@ public class Yatzygame {
             }
         }
         if(category == YatzyCategory.PAIR){
-            for (int i = 0; i < dice.length; i++) {
-                for (int j = 0; j < dice.length; j++) {
-                    if(i != j && dice[i] == dice[j]){
-                        return dice[i]*2;
-                    }
+            int[] frequencies = new int[7];
+            for (int die : dice) {
+                frequencies[die]++;
+            }
+            for(int value = frequencies.length - 1; value >= 0; value--){
+                if(frequencies[value] == 2){
+                    return value*2;
                 }
             }
-            return 10;
         }
         return result;
     }
