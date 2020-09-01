@@ -23,5 +23,6 @@ public class YatzyTest {
     void shouldScorePair(){
         assertEquals(10, yatzygame.score(YatzyCategory.PAIR, new int[] {1, 3, 5, 5, 2}));
         assertEquals(12, yatzygame.score(YatzyCategory.PAIR, new int[] {1, 6, 6, 5, 2}));
+        assertEquals(12, yatzygame.score(YatzyCategory.PAIR, new int[] {5, 5, 6, 6, 2}));
     }
 }
